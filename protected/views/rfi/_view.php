@@ -24,5 +24,19 @@
 	<?php echo CHtml::encode($data->assigned_to); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('created_by')); ?>:</b>
+	<?php echo CHtml::encode($data->created_by); ?>
+	<br />
+
+	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('date_created')); ?>:</b>
+	<?php echo CHtml::encode($data->date_created); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('date_updated')); ?>:</b>
+	<?php echo CHtml::encode($data->date_updated); ?>
+	<br />
+
+	*/ ?>
 
 </div>

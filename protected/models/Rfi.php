@@ -9,7 +9,10 @@
  * @property string $date_assigned
  * @property string $date_answered
  * @property string $date_closed
- * @property varchar $assigned_to
+ * @property string $assigned_to
+ * @property string $created_by
+ * @property string $date_created
+ * @property string $date_updated
  */
 class Rfi extends CActiveRecord
 {
@@ -38,11 +41,13 @@ class Rfi extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('rfi_id, date_entered, date_assigned, date_answered, date_closed, assigned_to', 'required'),
+			array('rfi_id', 'required'),
+                        array('rfi_id', 'unique'),
 			array('rfi_id', 'numerical', 'integerOnly'=>true),
+			array('assigned_to', 'length', 'max'=>256),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('rfi_id, date_entered, date_assigned, date_answered, date_closed, assigned_to', 'safe', 'on'=>'search'),
+			array('rfi_id, date_entered, date_assigned, date_answered, date_closed, assigned_to, created_by, date_created, date_updated', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,6 +74,9 @@ class Rfi extends CActiveRecord
 			'date_answered' => 'Date Answered',
 			'date_closed' => 'Date Closed',
 			'assigned_to' => 'Assigned To',
+			'created_by' => 'Created By',
+			'date_created' => 'Date Created',
+			'date_updated' => 'Date Updated',
 		);
 	}
 
@@ -88,10 +96,34 @@ class Rfi extends CActiveRecord
 		$criteria->compare('date_assigned',$this->date_assigned,true);
 		$criteria->compare('date_answered',$this->date_answered,true);
 		$criteria->compare('date_closed',$this->date_closed,true);
-		$criteria->compare('assigned_to',$this->assigned_to);
+		$criteria->compare('assigned_to',$this->assigned_to,true);
+		$criteria->compare('created_by',$this->created_by,true);
+		$criteria->compare('date_created',$this->date_created,true);
+		$criteria->compare('date_updated',$this->date_updated,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+        /**
+        * Prepares create_time, create_user_id, update_time and update_user_
+        * id attributes before performing validation.
+        */
+        public function beforeValidate()
+        {   
+            if($this->isNewRecord)
+            {
+            // set the create date, last updated date and the user doing the creating
+                $this->date_created=$this->date_updated=new CDbExpression('NOW()');
+                $this->created_by=$this->updated_by=Yii::app()->user->id;
+                $this->date_entered=$this->date_created;
+            }
+            else
+            {
+                //not a new record, so just set the last updated time and last updated user id
+                $this->date_updated=new CDbExpression('NOW()');
+                $this->updated_by=Yii::app()->user->id;
+            }
+            return parent::beforeValidate();
+        }
 }

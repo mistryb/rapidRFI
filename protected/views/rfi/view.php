@@ -24,5 +24,8 @@ $this->menu=array(
 		'date_answered',
 		'date_closed',
 		'assigned_to',
+		'created_by',
+		'date_created',
+		'date_updated',
 	),
 )); ?>

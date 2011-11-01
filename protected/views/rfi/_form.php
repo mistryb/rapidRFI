@@ -41,8 +41,26 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'assigned_to'); ?>
-		<?php echo $form->textField($model,'assigned_to'); ?>
+		<?php echo $form->textField($model,'assigned_to',array('size'=>11,'maxlength'=>11)); ?>
 		<?php echo $form->error($model,'assigned_to'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'created_by'); ?>
+		<?php echo $form->textField($model,'created_by',array('size'=>11,'maxlength'=>11)); ?>
+		<?php echo $form->error($model,'created_by'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'date_created'); ?>
+		<?php echo $form->textField($model,'date_created'); ?>
+		<?php echo $form->error($model,'date_created'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'date_updated'); ?>
+		<?php echo $form->textField($model,'date_updated'); ?>
+		<?php echo $form->error($model,'date_updated'); ?>
 	</div>
 
 	<div class="row buttons">
