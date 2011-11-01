@@ -1,0 +1,20 @@
+2011/10/31 20:16:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rfi".' in C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('rfi')
+#1 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/rapidrfi/index.php?r=rfi
+2011/11/01 17:17:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rapidrfi.user' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `user`.
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/01 17:17:11 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rapidrfi.user' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `user`.
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/01 17:17:58 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rapidrfi.user' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `user`.
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/01 17:18:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rapidrfi.user' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `user`.
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/01 17:20:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rapidrfi.user' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `user`.
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/01 17:20:54 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rapidrfi.user' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `user`.
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/01 17:20:58 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rapidrfi.user' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `user`.
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
