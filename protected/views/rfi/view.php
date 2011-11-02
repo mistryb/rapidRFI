@@ -25,6 +25,7 @@ $this->menu=array(
 		'date_closed',
 		'assigned_to',
 		'created_by',
+		'updated_by',
 		'date_created',
 		'date_updated',
 	),

@@ -29,6 +29,10 @@
 	<br />
 
 	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('updated_by')); ?>:</b>
+	<?php echo CHtml::encode($data->updated_by); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('date_created')); ?>:</b>
 	<?php echo CHtml::encode($data->date_created); ?>
 	<br />

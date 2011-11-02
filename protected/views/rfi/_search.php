@@ -32,12 +32,17 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'assigned_to'); ?>
-		<?php echo $form->textField($model,'assigned_to',array('size'=>11,'maxlength'=>11)); ?>
+		<?php echo $form->textField($model,'assigned_to',array('size'=>60,'maxlength'=>256)); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'created_by'); ?>
-		<?php echo $form->textField($model,'created_by',array('size'=>11,'maxlength'=>11)); ?>
+		<?php echo $form->textField($model,'created_by',array('size'=>60,'maxlength'=>256)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'updated_by'); ?>
+		<?php echo $form->textField($model,'updated_by',array('size'=>60,'maxlength'=>256)); ?>
 	</div>
 
 	<div class="row">

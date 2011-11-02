@@ -41,14 +41,20 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'assigned_to'); ?>
-		<?php echo $form->textField($model,'assigned_to',array('size'=>11,'maxlength'=>11)); ?>
+		<?php echo $form->textField($model,'assigned_to',array('size'=>60,'maxlength'=>256)); ?>
 		<?php echo $form->error($model,'assigned_to'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'created_by'); ?>
-		<?php echo $form->textField($model,'created_by',array('size'=>11,'maxlength'=>11)); ?>
+		<?php echo $form->textField($model,'created_by',array('size'=>60,'maxlength'=>256)); ?>
 		<?php echo $form->error($model,'created_by'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'updated_by'); ?>
+		<?php echo $form->textField($model,'updated_by',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->error($model,'updated_by'); ?>
 	</div>
 
 	<div class="row">
