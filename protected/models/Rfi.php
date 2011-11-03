@@ -49,6 +49,7 @@ class Rfi extends CActiveRecord
 		// will receive user inputs.
 		return array(
                         array('uploaded_file', 'file', 'types'=>'doc, docx, pdf', 'allowEmpty'=>'true'),
+                        array('uploaded_file', 'unsafe'),
 			array('rfi_id', 'required'),
                         array('rfi_id', 'unique'),
 			array('rfi_id', 'numerical', 'integerOnly'=>true),
