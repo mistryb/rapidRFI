@@ -1478,3 +1478,95 @@ Stack trace:
 #3 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
 #4 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
 #5 {main} REQUEST_URI=/rapidrfi/index.php?r=rfi/rfi
+2011/11/03 17:53:08 [warning] [application] Failed to set unsafe attribute "date_entered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:53:08 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:53:08 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:53:08 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:53:08 [warning] [application] Failed to set unsafe attribute "created_by" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:53:08 [warning] [application] Failed to set unsafe attribute "updated_by" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:53:08 [warning] [application] Failed to set unsafe attribute "date_updated" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:55:54 [warning] [application] Failed to set unsafe attribute "date_entered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:55:54 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:55:54 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:55:54 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:55:54 [warning] [application] Failed to set unsafe attribute "created_by" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:55:54 [warning] [application] Failed to set unsafe attribute "updated_by" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:55:54 [warning] [application] Failed to set unsafe attribute "date_updated" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:57:03 [warning] [application] Failed to set unsafe attribute "date_created" of "User".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\UserController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:57:03 [warning] [application] Failed to set unsafe attribute "date_updated" of "User".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\UserController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\UserController.php:160
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\UserController.php(54): UserController->loadModel('steverocque')
+#1 [internal function]: UserController->actionView('steverocque')
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\LOCALHOST\wamp\www\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#5 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#8 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#11 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('view')
+#13 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('user/view')
+#14 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#15 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#16 {main} REQUEST_URI=/rapidrfi/index.php?r=user/view&id=steverocque
+2011/11/03 17:57:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\UserController.php:160
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\UserController.php(54): UserController->loadModel('steverocque')
+#1 [internal function]: UserController->actionView('steverocque')
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\LOCALHOST\wamp\www\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#4 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#5 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#8 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#11 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('view')
+#13 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('user/view')
+#14 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#15 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#16 {main} REQUEST_URI=/rapidrfi/index.php?r=user/view&id=steverocque
+2011/11/03 17:58:50 [warning] [application] Failed to set unsafe attribute "date_created" of "User".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\UserController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:58:50 [warning] [application] Failed to set unsafe attribute "date_updated" of "User".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\UserController.php (71)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)

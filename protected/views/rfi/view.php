@@ -26,12 +26,6 @@ $this->menu=array(
 		'assigned_to',
 		'created_by',
 		'updated_by',
-		'date_created',
 		'date_updated',
-                array(
-                    'label'=>'Uploaded File',
-                    'type'=>'raw',
-                    'value'=>$model->uploaded_file
-                ),
 	),
 )); ?>

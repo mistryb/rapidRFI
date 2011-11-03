@@ -46,11 +46,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'date_created'); ?>
-		<?php echo $form->textField($model,'date_created'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'date_updated'); ?>
 		<?php echo $form->textField($model,'date_updated'); ?>
 	</div>

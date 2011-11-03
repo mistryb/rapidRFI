@@ -3,7 +3,6 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'rfi-form',
 	'enableAjaxValidation'=>false,
-        'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -59,29 +58,15 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'date_created'); ?>
-		<?php echo $form->textField($model,'date_created'); ?>
-		<?php echo $form->error($model,'date_created'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'date_updated'); ?>
 		<?php echo $form->textField($model,'date_updated'); ?>
 		<?php echo $form->error($model,'date_updated'); ?>
-	</div> 
-        
-        <div class="row">
-                <?php echo $form->labelEx($model,'uploaded_file'); ?>
-                <?php echo $form->fileField($model,'uploaded_file'); ?>
-                <?php echo $form->error($model,'uploaded_file'); ?>
-        </div>
-        
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
-        
-        
-       
+
 </div><!-- form -->

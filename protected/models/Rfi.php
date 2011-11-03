@@ -12,17 +12,10 @@
  * @property string $assigned_to
  * @property string $created_by
  * @property string $updated_by
- * @property string $date_created
  * @property string $date_updated
  */
 class Rfi extends CActiveRecord
-{
-       /**
-        * Property for receiving the file from the form
-        * It should be different from any other field in the database
-        */
-        public $uploaded_file;
-        
+{               
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @return Rfi the static model class
@@ -47,16 +40,14 @@ class Rfi extends CActiveRecord
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
-		return array(
-                        array('uploaded_file', 'file', 'types'=>'doc, docx, pdf', 'allowEmpty'=>'true'),
-                        array('uploaded_file', 'unsafe'),
+		return array(                                                
 			array('rfi_id', 'required'),
                         array('rfi_id', 'unique'),
 			array('rfi_id', 'numerical', 'integerOnly'=>true),
 			array('assigned_to', 'length', 'max'=>256),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('rfi_id, date_entered, date_assigned, date_answered, date_closed, assigned_to, created_by, date_created, date_updated', 'safe', 'on'=>'search'),
+			array('rfi_id, date_entered, date_assigned, date_answered, date_closed, assigned_to, created_by, date_updated', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -84,10 +75,8 @@ class Rfi extends CActiveRecord
 			'date_closed' => 'Date Closed',
 			'assigned_to' => 'Assigned To',
 			'created_by' => 'Created By',
-                        'updated_by' => 'Updated by',
-			'date_created' => 'Date Created',
-			'date_updated' => 'Date Updated',
-                        'uploaded_file' => 'Uploaded File'
+                        'updated_by' => 'Updated by',			
+			'date_updated' => 'Date Updated',                        
 		);
 	}
 
@@ -109,10 +98,8 @@ class Rfi extends CActiveRecord
 		$criteria->compare('date_closed',$this->date_closed,true);
 		$criteria->compare('assigned_to',$this->assigned_to,true);
 		$criteria->compare('created_by',$this->created_by,true);
-                $criteria->compare('updated_by',$this->updated_by,true);
-		$criteria->compare('date_created',$this->date_created,true);
-		$criteria->compare('date_updated',$this->date_updated,true);
-                $criteria->compare('uploaded_file',$this->uploaded_file,true);
+                $criteria->compare('updated_by',$this->updated_by,true);		
+		$criteria->compare('date_updated',$this->date_updated,true);               
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -127,9 +114,8 @@ class Rfi extends CActiveRecord
             if($this->isNewRecord)
             {
             // set the create date, last updated date and the user doing the creating
-                $this->date_created=$this->date_updated=new CDbExpression('NOW()');
-                $this->created_by=$this->updated_by=Yii::app()->user->name;
-                $this->date_entered=$this->date_created;
+                $this->date_entered=$this->date_updated=new CDbExpression('NOW()');
+                $this->created_by=$this->updated_by=Yii::app()->user->name;             
             }
             else
             {

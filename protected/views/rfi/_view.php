@@ -33,10 +33,6 @@
 	<?php echo CHtml::encode($data->updated_by); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('date_created')); ?>:</b>
-	<?php echo CHtml::encode($data->date_created); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('date_updated')); ?>:</b>
 	<?php echo CHtml::encode($data->date_updated); ?>
 	<br />

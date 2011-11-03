@@ -51,7 +51,6 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		/*
 		'created_by',
 		'updated_by',
-		'date_created',
 		'date_updated',
 		*/
 		array(
