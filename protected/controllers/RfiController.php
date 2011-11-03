@@ -69,10 +69,13 @@ class RfiController extends Controller
 		if(isset($_POST['Rfi']))
 		{
 			$model->attributes=$_POST['Rfi'];
+                        $model->uploaded_file=CUploadedFile::getInstance($model,'uploaded_file');
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->rfi_id));
+                        {
+                            $model->uploaded_file->saveAs(Yii::app()->basePath.'/uploads/'.$model->uploaded_file);
+                        }
+                            $this->redirect(array('view','id'=>$model->rfi_id));                                              
 		}
-
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -172,5 +175,5 @@ class RfiController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-	}
+	}      
 }

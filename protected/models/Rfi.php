@@ -17,6 +17,12 @@
  */
 class Rfi extends CActiveRecord
 {
+       /**
+        * Property for receiving the file from the form
+        * It should be different from any other field in the database
+        */
+        public $uploaded_file;
+        
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @return Rfi the static model class
@@ -42,6 +48,7 @@ class Rfi extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+                        array('uploaded_file', 'file', 'types'=>'doc, docx, pdf', 'allowEmpty'=>'true'),
 			array('rfi_id', 'required'),
                         array('rfi_id', 'unique'),
 			array('rfi_id', 'numerical', 'integerOnly'=>true),
@@ -79,6 +86,7 @@ class Rfi extends CActiveRecord
                         'updated_by' => 'Updated by',
 			'date_created' => 'Date Created',
 			'date_updated' => 'Date Updated',
+                        'uploaded_file' => 'Uploaded File'
 		);
 	}
 
@@ -103,6 +111,7 @@ class Rfi extends CActiveRecord
                 $criteria->compare('updated_by',$this->updated_by,true);
 		$criteria->compare('date_created',$this->date_created,true);
 		$criteria->compare('date_updated',$this->date_updated,true);
+                $criteria->compare('uploaded_file',$this->uploaded_file,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -128,5 +137,5 @@ class Rfi extends CActiveRecord
                 $this->updated_by=Yii::app()->user->name;
             }
             return parent::beforeValidate();
-        }
+        } 
 }
