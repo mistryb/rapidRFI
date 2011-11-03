@@ -41,7 +41,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'assigned_to'); ?>
-		<?php echo $form->textField($model,'assigned_to',array('size'=>60,'maxlength'=>256)); ?>
+                <?php echo $form->dropDownList($model,'assigned_to', CHtml::listData(User::model()->findAll(), 'id', 'username')); ?>
+		
 		<?php echo $form->error($model,'assigned_to'); ?>
 	</div>
 

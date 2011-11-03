@@ -59,6 +59,7 @@ class Rfi extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+                    'rfis'=>array(self::BELONGS_TO, 'User', 'assigned_to')                    
 		);
 	}
 
@@ -115,13 +116,21 @@ class Rfi extends CActiveRecord
             {
             // set the create date, last updated date and the user doing the creating
                 $this->date_entered=$this->date_updated=new CDbExpression('NOW()');
-                $this->created_by=$this->updated_by=Yii::app()->user->name;             
+                $this->created_by=$this->updated_by=Yii::app()->user->id;
+                if($this->assigned_to)
+                {
+                    $this->date_assigned=new CDbExpression('NOW()');
+                }
             }
             else
             {
                 //not a new record, so just set the last updated time and last updated user id
                 $this->date_updated=new CDbExpression('NOW()');
-                $this->updated_by=Yii::app()->user->name;
+                $this->updated_by=Yii::app()->user->id;
+                if($this->assigned_to)
+                {
+                    $this->date_assigned=new CDbExpression('NOW()');
+                }
             }
             return parent::beforeValidate();
         } 
