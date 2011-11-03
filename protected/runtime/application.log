@@ -1438,3 +1438,43 @@ in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
 2011/11/03 01:06:13 [warning] [application] Failed to set unsafe attribute "uploaded_file" of "Rfi".
 in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (98)
 in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/03 17:27:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "rfi".' in C:\LOCALHOST\wamp\www\yii\framework\web\CController.php:477
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(262): CController->missingAction('rfi')
+#1 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('rfi')
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('site/rfi')
+#3 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/rapidrfi/index.php?r=site/rfi
+2011/11/03 17:28:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "rfi".' in C:\LOCALHOST\wamp\www\yii\framework\web\CController.php:477
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(262): CController->missingAction('rfi')
+#1 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('rfi')
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('site/rfi')
+#3 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/rapidrfi/index.php?r=site/rfi
+2011/11/03 17:28:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "rfi".' in C:\LOCALHOST\wamp\www\yii\framework\web\CController.php:477
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(262): CController->missingAction('rfi')
+#1 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('rfi')
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('site/rfi')
+#3 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/rapidrfi/index.php?r=site/rfi
+2011/11/03 17:28:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "rfi".' in C:\LOCALHOST\wamp\www\yii\framework\web\CController.php:477
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(262): CController->missingAction('rfi')
+#1 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('rfi')
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('site/rfi')
+#3 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/rapidrfi/index.php?r=site/rfi
+2011/11/03 17:31:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "rfi".' in C:\LOCALHOST\wamp\www\yii\framework\web\CController.php:477
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(262): CController->missingAction('rfi')
+#1 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('rfi')
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('rfi/rfi')
+#3 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#4 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/rapidrfi/index.php?r=rfi/rfi
