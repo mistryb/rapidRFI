@@ -23,9 +23,24 @@ $this->menu=array(
 		'date_assigned',
 		'date_answered',
 		'date_closed',
-		'assigned_to',
-		'created_by',
-		'updated_by',
+		array(
+                    'label'=>'Assigned To',
+                    'type' =>'raw',
+                    'value'=>CHtml::link(CHtml::encode($model->assignedTo->username),
+                            array('user/view', 'id'=>$model->assignedTo->id)),
+                ),
+                array(
+                    'label'=>'Created By',
+                    'type' =>'raw',
+                    'value'=>CHtml::link(CHtml::encode($model->createdBy->username),
+                            array('user/view', 'id'=>$model->createdBy->id)),
+                ),
+                array(
+                    'label'=>'Updated By',
+                    'type' =>'raw',
+                    'value'=>CHtml::link(CHtml::encode($model->updatedBy->username),
+                            array('user/view', 'id'=>$model->updatedBy->id)),
+                ),		
 		'date_updated',
 	),
 )); ?>

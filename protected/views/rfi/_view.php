@@ -21,11 +21,11 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('assigned_to')); ?>:</b>
-	<?php echo CHtml::encode($data->assigned_to); ?>
+	<?php echo CHtml::encode($data->updatedBy->username); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_by')); ?>:</b>
-	<?php echo CHtml::encode($data->created_by); ?>
+	<?php echo CHtml::encode($data->createdBy->username); ?>
 	<br />
 
 	<?php /*

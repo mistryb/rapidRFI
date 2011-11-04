@@ -9,11 +9,17 @@
  * @property string $date_assigned
  * @property string $date_answered
  * @property string $date_closed
- * @property string $assigned_to
- * @property string $created_by
- * @property string $updated_by
+ * @property integer $assigned_to
+ * @property integer $created_by
+ * @property integer $updated_by
  * @property string $date_updated
+ * 
+ * The following are available model relations:
+ * @property User $updatedBy
+ * @property User $assignedTo
+ * @property User $createdBy
  */
+
 class Rfi extends CActiveRecord
 {               
 	/**
@@ -41,10 +47,9 @@ class Rfi extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(                                                
-			array('rfi_id', 'required'),
+			array('rfi_id, date_entered, created_by, updated_by, date_updated', 'required'),
                         array('rfi_id', 'unique'),
-			array('rfi_id', 'numerical', 'integerOnly'=>true),
-			array('assigned_to', 'length', 'max'=>256),
+			array('rfi_id, assigned_to, created_by, updated_by', 'numerical', 'integerOnly'=>true),			
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('rfi_id, date_entered, date_assigned, date_answered, date_closed, assigned_to, created_by, date_updated', 'safe', 'on'=>'search'),
@@ -59,7 +64,9 @@ class Rfi extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-                    'rfis'=>array(self::BELONGS_TO, 'User', 'assigned_to')                    
+                    'assignedTo' => array(self::BELONGS_TO, 'User', 'assigned_to'),
+                    'createdBy' => array(self::BELONGS_TO, 'User', 'created_by'),
+                    'updatedBy' => array(self::BELONGS_TO, 'User', 'updated_by'),
 		);
 	}
 
