@@ -26,8 +26,11 @@ $this->menu=array(
 		array(
                     'label'=>'Assigned To',
                     'type' =>'raw',
-                    'value'=>CHtml::link(CHtml::encode($model->assignedTo->username),
-                            array('user/view', 'id'=>$model->assignedTo->id)),
+                    'value'=>CHtml::link(CHtml::encode(
+                            CHtml::value($model->assignedTo,'username', NULL)
+                            ),
+                            array('user/view', 'id'=>CHtml::value($model->assignedTo, 'id', null)
+                            )),
                 ),
                 array(
                     'label'=>'Created By',
@@ -43,4 +46,5 @@ $this->menu=array(
                 ),		
 		'date_updated',
 	),
+        'nullDisplay'=>'Not Set',
 )); ?>

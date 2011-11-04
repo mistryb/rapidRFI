@@ -21,7 +21,9 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('assigned_to')); ?>:</b>
-	<?php echo CHtml::encode($data->updatedBy->username); ?>
+	<?php echo CHtml::encode(
+                CHtml::value($data->assignedTo, 'username', NULL)
+                ); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_by')); ?>:</b>
