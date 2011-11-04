@@ -1,6 +1,6 @@
 <?php
 
-class UserController extends Controller
+class RequestFileController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -61,14 +61,14 @@ class UserController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new User;
+		$model=new RequestFile;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['User']))
+		if(isset($_POST['RequestFile']))
 		{
-			$model->attributes=$_POST['User'];
+			$model->attributes=$_POST['RequestFile'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -90,11 +90,11 @@ class UserController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['User']))
+		if(isset($_POST['RequestFile']))
 		{
-			$model->attributes=$_POST['User'];
+			$model->attributes=$_POST['RequestFile'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->username));
+				$this->redirect(array('view','id'=>$model->id));
 		}
 
 		$this->render('update',array(
@@ -127,7 +127,7 @@ class UserController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('User');
+		$dataProvider=new CActiveDataProvider('RequestFile');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -138,10 +138,10 @@ class UserController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new User('search');
+		$model=new RequestFile('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['User']))
-			$model->attributes=$_GET['User'];
+		if(isset($_GET['RequestFile']))
+			$model->attributes=$_GET['RequestFile'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -155,7 +155,7 @@ class UserController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=User::model()->findByPk($id);
+		$model=RequestFile::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -167,10 +167,10 @@ class UserController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='user-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='request-file-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-	}   
+	}
 }
