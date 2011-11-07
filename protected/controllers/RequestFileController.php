@@ -173,4 +173,23 @@ class RequestFileController extends Controller
 			Yii::app()->end();
 		}
 	}
+        function init(){
+            if(isset($_POST['SESSION_ID'])){
+                $session=Yii::app()->getSession();
+                $session->close();
+                $session->sessionID = $_POST['SESSION_ID'];
+                $session->open();
+            }
+        }
+        function actionUpload(){
+            $model=new RequestFile;
+            if(isset($_POST['RequestFile'])){
+                $model->file=CUploadedFile::getInstance($model,'file');
+                if(!$model->save())
+                    throw new CHttpException(500);
+                $model->file->saveAs(Yii::app()->basePath);
+                echo 1;
+                Yii::app()->end();
+            }
+        }
 }

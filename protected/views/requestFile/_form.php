@@ -1,8 +1,12 @@
 <div class="form">
 
+
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'request-file-form',
 	'enableAjaxValidation'=>false,
+        'htmlOptions' =>array(
+            'enctype'=>'mutipart/form-data',
+        )
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -32,18 +36,16 @@
 		<?php echo $form->textField($model,'uploaded_by'); ?>
 		<?php echo $form->error($model,'uploaded_by'); ?>
 	</div>
-        
-        <?php $this->widget('ext.xupload.XUploadWidget', array(
-                                'url'=> Yii::app()->createUrl("site/upload"),
-                                'model'=> $model,
-                                'atttribute'=>'file',
-        ));
-        ?>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
+<?php $this->widget('ext.uploadify.MUploadify', array(
+    'model'=>$model,
+    'attribute'=>'file',
+));
+?>
 
 </div><!-- form -->
