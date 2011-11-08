@@ -68,7 +68,11 @@ class RequestFileController extends Controller
 
 		if(isset($_POST['RequestFile']))
 		{
-			$model->attributes=$_POST['RequestFile'];
+                    $model->attributes=$_POST['RequestFile'];
+                    if($filez=$this->uploadMultifile($model,'filename', '/uploads/'))
+                    {
+                        $model->filename= implode(',',$filez);
+                    }			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -180,16 +184,18 @@ class RequestFileController extends Controller
                 $session->sessionID = $_POST['SESSION_ID'];
                 $session->open();
             }
-        }
-        function actionUpload(){
-            $model=new RequestFile;
-            if(isset($_POST['RequestFile'])){
-                $model->file=CUploadedFile::getInstance($model,'file');
-                if(!$model->save())
-                    throw new CHttpException(500);
-                $model->file->saveAs(Yii::app()->basePath);
-                echo 1;
-                Yii::app()->end();
+        }     
+        public function uploadMultifile($model, $attr, $path)
+        {
+            if($sfile=CUploadedFile::getInstances($model, $attr))
+            {
+                foreach ($sfile as $i=>$file)
+                {                   
+                    $formatName=$model->rfi_id."-".date("Ymd")."-".$file;
+                    $file->saveAs(Yii::app()->basePath.DIRECTORY_SEPARATOR."..".$path.$formatName);                    
+                    $ffile[$i]=$formatName;
+                }
+                return($ffile);
             }
         }
 }

@@ -17,13 +17,22 @@
 		<?php echo $form->labelEx($model,'rfi_id'); ?>
 		<?php echo $form->textField($model,'rfi_id'); ?>
 		<?php echo $form->error($model,'rfi_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'filename'); ?>
-		<?php echo $form->textField($model,'filename',array('size'=>60,'maxlength'=>256)); ?>
-		<?php echo $form->error($model,'filename'); ?>
-	</div>
+	</div>              	
+        
+        <div class="row">
+        <?php echo $form->labelEx($model,'filename'); ?>
+        <?php  $this->widget('CMultiFileUpload',
+            array(  'model'=>$model,
+                    'attribute' => 'filename',
+                    'accept'=> 'doc|docx|pdf|txt',
+                    'denied'=>'Only doc,docx,pdf and txt are allowed', 
+                    'max'=>1,
+                    'remove'=>'[x]',
+                    'duplicate'=>'Already Selected',                          
+                ));?>
+        <?php echo $form->error($model,'filename'); ?>
+        <div class="hint">You can upload up to four attachments. </div>
+        </div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'uploaded_date'); ?>
@@ -42,10 +51,6 @@
 	</div>
 
 <?php $this->endWidget(); ?>
-<?php $this->widget('ext.uploadify.MUploadify', array(
-    'model'=>$model,
-    'attribute'=>'file',
-));
-?>
+
 
 </div><!-- form -->

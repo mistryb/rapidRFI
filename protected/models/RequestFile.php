@@ -47,6 +47,12 @@ class RequestFile extends CActiveRecord
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, rfi_id, filename, uploaded_date, uploaded_by', 'safe', 'on'=>'search'),
+                        array('filename', 'file', 
+                            'types'=>'docx,doc',
+                            'maxSize'=> 1024*1024*10, //10MB
+                            'tooLarge'=>'The file is too large',
+                            'allowEmpty'=>1,                            
+                            ),
 		);
 	}
 
