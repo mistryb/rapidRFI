@@ -27,6 +27,10 @@ $this->menu=array(
                     CHtml::link(CHtml::encode($model->filename), Yii::app()->baseUrl.'/uploads/'.$model->rfi_id."/".$model->filename)
                 ),
 		'uploaded_date',
-		'uploaded_by',
+		array(
+                    'label'=>'Uploaded By',
+                    'type'=>'raw',
+                    'value'=>$model->uploadedBy->username,
+                ),
 	),
 )); ?>
