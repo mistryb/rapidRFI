@@ -14,7 +14,7 @@
  * @property User $uploadedBy
  * @property Rfi $rfi
  */
-class RequestFile extends CActiveRecord
+class RequestFile extends UploadsAR
 {
 	/**
 	 * Returns the static model of the specified AR class.
