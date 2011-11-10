@@ -20,7 +20,12 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'rfi_id',
-		'filename',
+		array(
+                    'label'=>'FileName',
+                    'type'=> 'raw',
+                    'value'=>
+                    CHtml::link(CHtml::encode($model->filename), Yii::app()->baseUrl.'/uploads/'.$model->rfi_id."/".$model->filename)
+                ),
 		'uploaded_date',
 		'uploaded_by',
 	),

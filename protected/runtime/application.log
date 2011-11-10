@@ -3564,3 +3564,22 @@ REQUEST_URI=/rapidrfi/index.php?r=requestfile/create
 in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RequestFileController.php (194)
 in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RequestFileController.php (71)
 in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/10 16:41:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\ResponseFileController.php:164
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\ResponseFileController.php(54): ResponseFileController->loadModel('2')
+#1 [internal function]: ResponseFileController->actionView('2')
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\actions\CAction.php(104): ReflectionMethod->invokeArgs(Object(ResponseFileController), Array)
+#3 C:\LOCALHOST\wamp\www\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ResponseFileController), Object(ReflectionMethod), Array)
+#4 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#5 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#8 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#11 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('view')
+#13 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('responsefile/vi...')
+#14 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#15 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#16 {main} REQUEST_URI=/rapidrfi/index.php?r=responsefile/view&id=2
