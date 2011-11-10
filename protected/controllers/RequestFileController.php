@@ -190,10 +190,16 @@ class RequestFileController extends Controller
             if($sfile=CUploadedFile::getInstances($model, $attr))
             {
                 foreach ($sfile as $i=>$file)
-                {                   
-                    $formatName=$model->rfi_id."-".date("Ymd")."-".$file;
-                    $file->saveAs(Yii::app()->basePath.DIRECTORY_SEPARATOR."..".$path.$formatName);                    
-                    $ffile[$i]=$formatName;
+                {        
+                    $folder=Yii::app()->basePath.DIRECTORY_SEPARATOR."..".$path;
+                    if(!is_dir($folder.$model->rfi_id))
+                    {
+                        mkdir($folder.$model->rfi_id);                       
+                    }    
+                    $savepath=$folder.$model->rfi_id.DIRECTORY_SEPARATOR;
+                    $formatName=date("Ymd")."-".$file;
+                    $file->saveAs($savepath.$formatName);
+                    $ffile[$i]=$formatName;                                           
                 }
                 return($ffile);
             }
