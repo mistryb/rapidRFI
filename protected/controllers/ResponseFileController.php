@@ -68,7 +68,11 @@ class ResponseFileController extends Controller
 
 		if(isset($_POST['ResponseFile']))
 		{
-			$model->attributes=$_POST['ResponseFile'];
+                    $model->attributes=$_POST['ResponseFile'];
+                    if($filez=$this->uploadMultifile($model,'filename', '/uploads/'))
+                    {
+                        $model->filename= implode(',',$filez);
+                    }			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -173,4 +177,23 @@ class ResponseFileController extends Controller
 			Yii::app()->end();
 		}
 	}
+         public function uploadMultifile($model, $attr, $path)
+        {
+            if($sfile=CUploadedFile::getInstances($model, $attr))
+            {
+                foreach ($sfile as $i=>$file)
+                {        
+                    $folder=Yii::app()->basePath.DIRECTORY_SEPARATOR."..".$path;
+                    if(!is_dir($folder.$model->rfi_id))
+                    {
+                        mkdir($folder.$model->rfi_id);                       
+                    }    
+                    $savepath=$folder.$model->rfi_id.DIRECTORY_SEPARATOR;
+                    $formatName=date("Ymd")."-".$file;
+                    $file->saveAs($savepath.$formatName);
+                    $ffile[$i]=$formatName;                                           
+                }
+                return($ffile);
+            }
+        }
 }

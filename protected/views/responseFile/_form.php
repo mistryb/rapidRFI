@@ -3,6 +3,9 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'response-file-form',
 	'enableAjaxValidation'=>false,
+        'htmlOptions' =>array(
+            'enctype'=>'mutipart/form-data',
+        )
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -14,12 +17,21 @@
 		<?php echo $form->textField($model,'rfi_id'); ?>
 		<?php echo $form->error($model,'rfi_id'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'filename'); ?>
-		<?php echo $form->textField($model,'filename',array('size'=>60,'maxlength'=>256)); ?>
-		<?php echo $form->error($model,'filename'); ?>
-	</div>
+        
+        <div class="row">
+        <?php echo $form->labelEx($model,'filename'); ?>
+        <?php  $this->widget('CMultiFileUpload',
+            array(  'model'=>$model,
+                    'attribute' => 'filename',
+                    'accept'=> 'doc|docx|pdf|txt',
+                    'denied'=>'Only doc,docx,pdf and txt are allowed', 
+                    'max'=>1,
+                    'remove'=>'[x]',
+                    'duplicate'=>'Already Selected',                          
+                ));?>
+        <?php echo $form->error($model,'filename'); ?>
+        <div class="hint">You can upload one attachments. </div>
+        </div>	
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'uploaded_date'); ?>

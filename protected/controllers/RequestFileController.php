@@ -176,15 +176,7 @@ class RequestFileController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
-	}
-        function init(){
-            if(isset($_POST['SESSION_ID'])){
-                $session=Yii::app()->getSession();
-                $session->close();
-                $session->sessionID = $_POST['SESSION_ID'];
-                $session->open();
-            }
-        }     
+	}           
         public function uploadMultifile($model, $attr, $path)
         {
             if($sfile=CUploadedFile::getInstances($model, $attr))
