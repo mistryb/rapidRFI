@@ -127,10 +127,10 @@ class RfiController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Rfi');
+		$dataProvider=new CActiveDataProvider('Rfi');                
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+			'dataProvider'=>$dataProvider,                     
+		));             
 	}
 
 	/**

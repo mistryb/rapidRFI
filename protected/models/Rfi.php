@@ -67,6 +67,8 @@ class Rfi extends CActiveRecord
                     'assignedTo' => array(self::BELONGS_TO, 'User', 'assigned_to'),
                     'createdBy' => array(self::BELONGS_TO, 'User', 'created_by'),
                     'updatedBy' => array(self::BELONGS_TO, 'User', 'updated_by'),
+                    'requestFiles' => array(self::HAS_MANY, 'RequestFile', 'rfi_id'),                        
+                    'responseFiles' => array(self::HAS_MANY, 'ResponseFile', 'rfi_id'),                        
 		);
 	}
 
