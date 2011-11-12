@@ -50,9 +50,25 @@ class RfiController extends Controller
 	 */
 	public function actionView($id)
 	{
+                $model=$this->loadModel($id);
+                
+                $requestDataProvider= new CActiveDataProvider('RequestFile',array(
+                   'criteria'=>array(
+                       'condition'=>'rfi_id='.$model->rfi_id,
+                   ) 
+                ));
+                
+                $responseDataProvider= new CActiveDataProvider('ResponseFile',array(
+                   'criteria'=>array(
+                       'condition'=>'rfi_id='.$model->rfi_id,
+                   ) 
+                ));
+                
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
+			'model'=>$model,
+                        'requestDataProvider'=>$requestDataProvider,
+                        'responseDataProvider'=>$responseDataProvider,
+		));                               
 	}
 
 	/**

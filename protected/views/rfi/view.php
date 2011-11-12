@@ -44,10 +44,23 @@ $this->menu=array(
                     'value'=>CHtml::link(CHtml::encode($model->updatedBy->username),
                             array('user/view', 'id'=>$model->updatedBy->id)),
                 ),		
-		'date_updated',
+		'date_updated',                
 	),
         'nullDisplay'=>'Not Set',
 )); ?>
 
+</br>
+<h1>Request Files for Rfi #<?php echo $model->rfi_id; ?></h1>
+<?php $this->widget( 'zii.widgets.CListView', array(
+        'dataProvider' => $requestDataProvider,       
+        'itemView' => '_file',
+    ));
+?>
+<h1>Response Files for Rfi #<?php echo $model->rfi_id; ?></h1>
+<?php $this->widget( 'zii.widgets.CListView', array(
+        'dataProvider' => $responseDataProvider,       
+        'itemView' => '_file',
+    ));
+?>
 
 
