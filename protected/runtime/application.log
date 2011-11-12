@@ -5007,3 +5007,71 @@ Stack trace:
 REQUEST_URI=/rapidrfi/index.php?r=rfi/view&id=1
 in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (58)
 in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 18:03:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "*rbam".' in C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('*rbam')
+#1 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/rapidrfi/index.php?r=*rbam
+2011/11/12 18:03:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rbam".' in C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('rbam')
+#1 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/rapidrfi/index.php?r=rbam
+2011/11/12 18:14:05 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rapidrfi.authitem' doesn't exist. The SQL statement executed was: SELECT *
+FROM `AuthItem`
+WHERE name=:name.
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\modules\rbam\controllers\RbamController.php (52)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 18:14:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rapidrfi.authitem' doesn't exist. The SQL statement executed was: SELECT *
+FROM `AuthItem`
+WHERE name=:name' in C:\LOCALHOST\wamp\www\yii\framework\db\CDbCommand.php:516
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\db\CDbCommand.php(393): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\LOCALHOST\wamp\www\yii\framework\web\auth\CDbAuthManager.php(477): CDbCommand->queryRow()
+#2 C:\LOCALHOST\wamp\www\rapidRFI\protected\modules\rbam\controllers\RbamController.php(52): CDbAuthManager->getAuthItem('RBAC Manager')
+#3 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(1143): RbamController->accessRules()
+#4 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#7 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('')
+#9 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('rbam')
+#10 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#11 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#12 {main} REQUEST_URI=/rapidrfi/index.php?r=rbam
+2011/11/12 19:07:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\LOCALHOST\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('manage')
+#8 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('rbam/authItems/...')
+#9 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/rapidrfi/index.php?r=rbam/authItems/manage&item=Site+Administrator
+2011/11/12 19:07:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rfi=rbam".' in C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php:281
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('rfi=rbam')
+#1 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#2 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/rapidrfi/index.php?r=rfi=rbam
+2011/11/12 19:07:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\LOCALHOST\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('')
+#8 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('rbam')
+#9 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/rapidrfi/index.php?r=rbam

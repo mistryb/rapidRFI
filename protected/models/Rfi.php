@@ -10,11 +10,15 @@
  * @property string $date_answered
  * @property string $date_closed
  * @property integer $assigned_to
+ * @property integer $answered
+ * @property integer $closed
  * @property integer $created_by
  * @property integer $updated_by
  * @property string $date_updated
  * 
  * The following are available model relations:
+ * @property RequestFile[] $requestFiles
+ * @property ResponseFile[] $responseFiles
  * @property User $updatedBy
  * @property User $assignedTo
  * @property User $createdBy
@@ -84,6 +88,8 @@ class Rfi extends CActiveRecord
 			'date_answered' => 'Date Answered',
 			'date_closed' => 'Date Closed',
 			'assigned_to' => 'Assigned To',
+                        'answered' => 'Answered',
+                        'closed' => 'Closed',
 			'created_by' => 'Created By',
                         'updated_by' => 'Updated by',			
 			'date_updated' => 'Date Updated',                        
