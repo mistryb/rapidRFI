@@ -104,8 +104,13 @@ class RfiController extends Controller
 	{            
                $model=$this->loadModel($id);
                $params=array('rfi'=>$model);
-               if (Yii::app()->user->checkAccess('Rfi:Update', $params))
+               if(!Yii::app()->user->checkAccess('RFI Manager'))
                {
+                   if (!Yii::app()->user->checkAccess('Rfi:Update', $params))
+                   {
+                      throw new CHttpException(400,'Invalid request. This RFI is not Assigned to You.'); 
+                   }
+               }               
                   // Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -120,13 +125,7 @@ class RfiController extends Controller
 
 		$this->render('update',array(
 			'model'=>$model,
-		)); 
-               }
-               else
-               {
-                   throw new CHttpException(400,'Invalid request. This RFI is not Assigned to You.');
-               }
-		            		
+		));                                                                		
 	}
 
 	/**
