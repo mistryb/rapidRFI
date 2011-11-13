@@ -33,6 +33,16 @@ $this->menu=array(
                             )),
                 ),
                 array(
+                    'label'=>'Answered',
+                    'type'=>'boolean',
+                    'value'=>$model->answered,
+                ),
+                array(
+                    'label'=>'Closed',
+                    'type'=>'boolean',
+                    'value'=>$model->closed,
+                ),
+                array(
                     'label'=>'Created By',
                     'type' =>'raw',
                     'value'=>CHtml::link(CHtml::encode($model->createdBy->username),

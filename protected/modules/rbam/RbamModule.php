@@ -203,7 +203,7 @@ class RbamModule extends CWebModule {
 	* "RBAC Manager" role.
 	* If empty() (default) no initialisation is performed.
 	*/
-	public $initialise=true;
+	public $initialise;
 	/**
 	* @property mixed modules to exclude when generating authorisation data.
 	* Either an array or comma delimited string of module ids.
@@ -221,7 +221,7 @@ class RbamModule extends CWebModule {
 	* each access and options to initialise (if RbamModule::initialise is not
 	* empty) and generate authorisation data are shown.
 	*/
-	public $development = true;
+	public $development=true;
 
 	public $defaultController = 'Rbam';
 	private $_cs;

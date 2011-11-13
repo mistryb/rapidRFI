@@ -5075,3 +5075,421 @@ Stack trace:
 #9 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
 #10 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
 #11 {main} REQUEST_URI=/rapidrfi/index.php?r=rbam
+2011/11/12 20:55:52 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "activeCheckBox".' in C:\LOCALHOST\wamp\www\yii\framework\base\CComponent.php:269
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\rapidRFI\protected\views\rfi\_form.php(51): CComponent->__call('activeCheckBox', Array)
+#1 C:\LOCALHOST\wamp\www\rapidRFI\protected\views\rfi\_form.php(51): CActiveForm->activeCheckBox(Object(Rfi), 'answered')
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\CBaseController.php(119): require('C:\LOCALHOST\wa...')
+#3 C:\LOCALHOST\wamp\www\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\LOCALHOST\wa...', Array, true)
+#4 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\LOCALHOST\wa...', Array, true)
+#5 C:\LOCALHOST\wamp\www\rapidRFI\protected\views\rfi\create.php(15): CController->renderPartial('_form', Array)
+#6 C:\LOCALHOST\wamp\www\yii\framework\web\CBaseController.php(119): require('C:\LOCALHOST\wa...')
+#7 C:\LOCALHOST\wamp\www\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\LOCALHOST\wa...', Array, true)
+#8 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\LOCALHOST\wa...', Array, true)
+#9 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(779): CController->renderPartial('create', Array, true)
+#10 C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php(94): CController->render('create', Array)
+#11 C:\LOCALHOST\wamp\www\yii\framework\web\actions\CInlineAction.php(50): RfiController->actionCreate()
+#12 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#13 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#16 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#19 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('create')
+#21 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('rfi/create')
+#22 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#23 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#24 {main} REQUEST_URI=/rapidrfi/index.php?r=rfi/create
+2011/11/12 20:58:19 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 20:58:19 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 20:58:19 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 20:58:19 [warning] [application] Failed to set unsafe attribute "answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 20:58:19 [warning] [application] Failed to set unsafe attribute "closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:03:49 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:03:49 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:03:49 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:09:44 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:09:44 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:09:44 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:12:45 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:12:45 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:12:45 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:15:33 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:15:33 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:15:33 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:15:43 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:15:43 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:15:43 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:15:51 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:15:51 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:15:51 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:16:03 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:16:03 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:16:03 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:18:53 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:18:53 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:18:53 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:19:07 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:19:07 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:19:07 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:21:42 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:21:42 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:21:42 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:21:52 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:21:52 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:21:52 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:22:19 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:22:19 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:22:19 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:23:45 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:23:45 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:23:45 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:29:06 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:29:06 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:29:06 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:29:20 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:29:20 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:29:20 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:29:35 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:29:35 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:29:35 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:29:45 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:29:45 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 21:29:45 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:26:09 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:26:09 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:26:09 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:26:31 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:26:31 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:26:31 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:26:55 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:26:55 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:26:55 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:34:07 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:34:07 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:34:07 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:34:20 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:34:20 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:34:20 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:35:06 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:35:06 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:35:06 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (111)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:42:09 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:42:09 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:42:09 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:42:13 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:42:13 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 22:42:13 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:04:32 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:04:32 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:04:32 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:04:53 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:04:53 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:04:53 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:05:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\LOCALHOST\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('create')
+#8 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('rbam/authItems/...')
+#9 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/rapidrfi/index.php?r=rbam/authItems/create&type=2
+2011/11/12 23:05:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\LOCALHOST\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('index')
+#8 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('rbam/authItems/...')
+#9 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/rapidrfi/index.php?r=rbam/authItems/index
+2011/11/12 23:21:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\LOCALHOST\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('delete')
+#8 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('rfi/delete')
+#9 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/rapidrfi/index.php?r=rfi/delete&id=1
+2011/11/12 23:21:23 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:21:23 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:21:23 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:21:33 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:21:33 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:21:33 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:24:54 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:24:54 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:24:54 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:35:03 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:35:03 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:35:03 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:35:33 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:35:33 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:35:33 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:36:27 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:36:27 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:36:27 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:38:24 [warning] [application] Failed to set unsafe attribute "date_assigned" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:38:24 [warning] [application] Failed to set unsafe attribute "date_answered" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:38:24 [warning] [application] Failed to set unsafe attribute "date_closed" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (112)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/12 23:39:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\LOCALHOST\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('manage')
+#8 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('rbam/authItems/...')
+#9 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/rapidrfi/index.php?r=rbam/authItems/manage&item=Rfi%3AAnswer
+2011/11/12 23:39:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\LOCALHOST\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:158
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#3 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#6 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('index')
+#8 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('rbam/authItems/...')
+#9 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#10 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/rapidrfi/index.php?r=rbam/authItems/index

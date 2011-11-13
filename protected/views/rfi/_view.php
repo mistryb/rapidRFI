@@ -31,6 +31,15 @@
 	<br />
 
 	<?php /*
+        
+        <b><?php echo CHtml::encode($data->getAttributeLabel('closed')); ?>:</b>
+	<?php echo CHtml::encode($data->closed); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('created_by')); ?>:</b>
+	<?php echo CHtml::encode($data->created_by); ?>
+	<br />
+                 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('updated_by')); ?>:</b>
 	<?php echo CHtml::encode($data->updated_by); ?>
 	<br />

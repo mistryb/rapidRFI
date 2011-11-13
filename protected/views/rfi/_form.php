@@ -46,6 +46,18 @@
 		<?php echo $form->error($model,'assigned_to'); ?>
 	</div>
 
+        <div class="row">
+		<?php echo $form->labelEx($model,'answered'); ?>
+		<?php echo $form->checkBox($model,'answered'); ?>
+		<?php echo $form->error($model,'answered'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'closed'); ?>
+		<?php echo $form->checkBox($model,'closed'); ?>
+		<?php echo $form->error($model,'closed'); ?>
+	</div>
+        
 	<div class="row">
 		<?php echo $form->labelEx($model,'created_by'); ?>
 		<?php echo $form->textField($model,'created_by',array('size'=>60,'maxlength'=>256)); ?>

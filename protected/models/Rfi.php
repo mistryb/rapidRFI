@@ -54,7 +54,8 @@ class Rfi extends CActiveRecord
 			array('rfi_id, date_entered, created_by, updated_by, date_updated', 'required'),
                         array('rfi_id', 'unique'),
 			array('rfi_id, assigned_to, created_by, updated_by', 'numerical', 'integerOnly'=>true),			
-			// The following rule is used by search().
+			array('answered, closed', 'boolean'),
+                        // The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('rfi_id, date_entered, date_assigned, date_answered, date_closed, assigned_to, created_by, date_updated', 'safe', 'on'=>'search'),
 		);
@@ -132,21 +133,17 @@ class Rfi extends CActiveRecord
             // set the create date, last updated date and the user doing the creating
                 $this->date_entered=$this->date_updated=new CDbExpression('NOW()');
                 $this->created_by=$this->updated_by=Yii::app()->user->id;
-                if($this->assigned_to)
-                {
-                    $this->date_assigned=new CDbExpression('NOW()');
-                }
             }
             else
             {
                 //not a new record, so just set the last updated time and last updated user id
                 $this->date_updated=new CDbExpression('NOW()');
-                $this->updated_by=Yii::app()->user->id;
-                if($this->assigned_to)
-                {
-                    $this->date_assigned=new CDbExpression('NOW()');
-                }
+                $this->updated_by=Yii::app()->user->id;                                                                         
             }
             return parent::beforeValidate();
-        } 
+        }
+        public function isUsersRfi($model)
+        {
+            return(Yii::app()->user->id==$model->assigned_to);
+        }
 }

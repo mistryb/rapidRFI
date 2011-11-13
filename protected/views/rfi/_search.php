@@ -34,6 +34,16 @@
 		<?php echo $form->label($model,'assigned_to'); ?>
 		<?php echo $form->textField($model,'assigned_to',array('size'=>60,'maxlength'=>256)); ?>
 	</div>
+    
+        <div class="row">
+		<?php echo $form->label($model,'answered'); ?>
+		<?php echo $form->textField($model,'answered'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'closed'); ?>
+		<?php echo $form->textField($model,'closed'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'created_by'); ?>

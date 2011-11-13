@@ -85,6 +85,7 @@ class RfiController extends Controller
 		if(isset($_POST['Rfi']))
 		{
 			$model->attributes=$_POST['Rfi'];
+                        $model = $this->actionAssign($model);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->rfi_id));
 		}
@@ -109,6 +110,8 @@ class RfiController extends Controller
 		if(isset($_POST['Rfi']))
 		{
 			$model->attributes=$_POST['Rfi'];
+                        $model= $this->actionAssign($model);
+                        
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->rfi_id));
 		}
@@ -163,7 +166,46 @@ class RfiController extends Controller
 			'model'=>$model,
 		));
 	}
-
+        /**
+         * Assigns a user to the RFI
+         */
+        public function actionAssign($model)
+        {
+            if(!isset($model->date_assigned))
+                    {
+                        if($model->assigned_to)
+                        {
+                             $model->date_assigned=new CDbExpression('NOW()');
+                        }                     
+                    }
+                    return $model;
+        }        
+        /**
+         * Marks the RFI as answered
+         */
+        public function actionAnswer($model)
+        {
+             if(!isset($model->date_answered))
+                    {
+                       if($model->answered)
+                        {
+                            $model->date_answered=new CDbExpression('NOW()');
+                        } 
+                    }
+        }        
+        /**
+         *  Marks the RFI as closed         
+         */
+        public function actionClose($model)
+        {
+            if(!isset($model->date_closed))
+                    {
+                       if($model->closed)
+                        {
+                            $model->date_closed=new CDbExpression('NOW()');
+                        } 
+                    } 
+        }
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
