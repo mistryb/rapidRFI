@@ -26,18 +26,18 @@ class RfiController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
+			array('allow',  // allow authenticated users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('@'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
+			array('allow', // allow Team user to perform 'update' actions
+				'actions'=>array('update'),
+				'roles'=>array('Team'),
 			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-			),
+                        array('allow', //allow RFI Managers to Perform 'create' and 'admin' and 'delete' actions
+                                'actions' =>array('create', 'admin', 'delete'),
+                                'roles' => array('RFI Manager'),
+                            ),			
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
@@ -76,8 +76,8 @@ class RfiController extends Controller
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
 	public function actionCreate()
-	{
-		$model=new Rfi;
+	{           
+             $model=new Rfi;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -92,7 +92,7 @@ class RfiController extends Controller
 
 		$this->render('create',array(
 			'model'=>$model,
-		));
+		));           	
 	}
 
 	/**
@@ -101,10 +101,12 @@ class RfiController extends Controller
 	 * @param integer $id the ID of the model to be updated
 	 */
 	public function actionUpdate($id)
-	{
-		$model=$this->loadModel($id);
-
-		// Uncomment the following line if AJAX validation is needed
+	{            
+               $model=$this->loadModel($id);
+               $params=array('rfi'=>$model);
+               if (Yii::app()->user->checkAccess('Rfi:Update', $params))
+               {
+                  // Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Rfi']))
@@ -118,7 +120,13 @@ class RfiController extends Controller
 
 		$this->render('update',array(
 			'model'=>$model,
-		));
+		)); 
+               }
+               else
+               {
+                   throw new CHttpException(400,'Invalid request. This RFI is not Assigned to You.');
+               }
+		            		
 	}
 
 	/**
@@ -170,28 +178,29 @@ class RfiController extends Controller
          * Assigns a user to the RFI
          */
         public function actionAssign($model)
-        {
-            if(!isset($model->date_assigned))
+        {            
+                if(!isset($model->date_assigned))
                     {
                         if($model->assigned_to)
                         {
                              $model->date_assigned=new CDbExpression('NOW()');
                         }                     
                     }
-                    return $model;
+                    return $model;                        
         }        
         /**
          * Marks the RFI as answered
          */
         public function actionAnswer($model)
-        {
-             if(!isset($model->date_answered))
+        {            
+              if(!isset($model->date_answered))
                     {
                        if($model->answered)
                         {
                             $model->date_answered=new CDbExpression('NOW()');
                         } 
-                    }
+                    }                          
+            return $model;
         }        
         /**
          *  Marks the RFI as closed         
