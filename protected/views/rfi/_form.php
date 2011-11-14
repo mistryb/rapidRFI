@@ -17,22 +17,41 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'assigned_to'); ?>
-                <?php echo $form->dropDownList($model,'assigned_to', CHtml::listData(User::model()->findAll(), 'id', 'username'), array('prompt'=>'Select')); ?>
-		
+                <?php echo $form->dropDownList($model,'assigned_to', CHtml::listData(User::model()->findAll(), 'id', 'username'), array('prompt'=>'Select')); ?>		
 		<?php echo $form->error($model,'assigned_to'); ?>
 	</div>
 
+        <?php   
+            $params=array('rfi'=>$model);
+            if (Yii::app()->user->checkAccess('Rfi:Answer', $params))
+            {
+        ?>
         <div class="row">
 		<?php echo $form->labelEx($model,'answered'); ?>
 		<?php echo $form->checkBox($model,'answered'); ?>
 		<?php echo $form->error($model,'answered'); ?>
 	</div>
+        <?php 
+            }
+            else
+            {
+                ?>
+                <div class="Hint">This RFI has already been answered</div>
+            <?php
+            }
+            ?>
 
+<?php if (Yii::app()->user->checkAccess('RFI Manager'))
+{
+    ?>
 	<div class="row">
 		<?php echo $form->labelEx($model,'closed'); ?>
 		<?php echo $form->checkBox($model,'closed'); ?>
 		<?php echo $form->error($model,'closed'); ?>
-	</div>        	
+        </div>
+<?php
+}
+?>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
