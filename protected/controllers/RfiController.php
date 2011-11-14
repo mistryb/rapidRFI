@@ -27,7 +27,7 @@ class RfiController extends Controller
 	{
 		return array(
 			array('allow',  // allow authenticated users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','myrfi'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow Team user to perform 'update' actions
@@ -156,6 +156,17 @@ class RfiController extends Controller
 	{
 		$dataProvider=new CActiveDataProvider('Rfi');                
 		$this->render('index',array(
+			'dataProvider'=>$dataProvider,                     
+		));             
+	}
+        
+        /**
+	 * Lists myRFIs Page models.
+	 */
+	public function actionMyrfi()
+	{
+		$dataProvider=new CActiveDataProvider('Rfi');                
+		$this->render('myrfi',array(
 			'dataProvider'=>$dataProvider,                     
 		));             
 	}

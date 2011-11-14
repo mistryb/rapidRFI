@@ -5,7 +5,7 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Rfi', 'url'=>array('index')),
+	array('label'=>'My RFIs', 'url'=>array('myrfi')),
 	array('label'=>'Create Rfi', 'url'=>array('create')),
 	array('label'=>'Update Rfi', 'url'=>array('update', 'id'=>$model->rfi_id)),
 	array('label'=>'Delete Rfi', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->rfi_id),'confirm'=>'Are you sure you want to delete this item?')),
