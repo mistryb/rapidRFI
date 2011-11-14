@@ -4,15 +4,21 @@
  * This is the model class for table "tbl_user".
  *
  * The followings are the available columns in table 'tbl_user':
+ * @property integer $id
  * @property string $username
  * @property string $password
- * @property string $first_name
- * @property string $last_name
  * @property string $email
- * @property string $discipline
  * @property string $date_created
  * @property string $date_updated
+ * 
+ * The followings are the available model relations:
+ * @property RequestFile[] $requestFiles
+ * @property ResponseFile[] $responseFiles
+ * @property Rfi[] $rfis
+ * @property Rfi[] $rfis1
+ * @property Rfi[] $rfis2
  */
+
 class User extends CActiveRecord
 {
     public $password_repeat;
@@ -41,15 +47,15 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, first_name, last_name, email, discipline', 'required'),
+			array('username, password, email', 'required'),
                         array('username, email', 'unique'),
                         array('password', 'compare'),
                         array('password_repeat', 'safe'),
-			array('username, password, first_name, last_name, discipline', 'length', 'max'=>256),
+			array('username, password', 'length', 'max'=>256),
 			array('email', 'length', 'max'=>256),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('username, first_name, last_name, email, discipline, date_created, date_updated', 'safe', 'on'=>'search'),
+			array('username, email, date_created, date_updated', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,7 +67,12 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-		);
+                        'requestFiles' => array(self::HAS_MANY, 'RequestFile', 'uploaded_by'),
+			'responseFiles' => array(self::HAS_MANY, 'ResponseFile', 'uploaded_by'),
+			'rfis' => array(self::HAS_MANY, 'Rfi', 'assigned_to'),
+			'rfis1' => array(self::HAS_MANY, 'Rfi', 'created_by'),
+			'rfis2' => array(self::HAS_MANY, 'Rfi', 'updated_by'),
+                    );
 	}
 
 	/**
@@ -70,6 +81,7 @@ class User extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+                        'id' => 'ID',
 			'username' => 'Username',
 			'password' => 'Password',
 			'first_name' => 'First Name',

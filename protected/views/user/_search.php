@@ -6,18 +6,13 @@
 )); ?>
 
 	<div class="row">
+		<?php echo $form->label($model,'id'); ?>
+		<?php echo $form->textField($model,'id'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'username'); ?>
 		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>256)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'first_name'); ?>
-		<?php echo $form->textField($model,'first_name',array('size'=>60,'maxlength'=>256)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'last_name'); ?>
-		<?php echo $form->textField($model,'last_name',array('size'=>60,'maxlength'=>256)); ?>
 	</div>
 
 	<div class="row">
@@ -26,8 +21,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'discipline'); ?>
-		<?php echo $form->textField($model,'discipline',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->label($model,'last_login_time'); ?>
+		<?php echo $form->textField($model,'last_login_time'); ?>
 	</div>
 
 	<div class="row">
