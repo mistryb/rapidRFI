@@ -14,6 +14,18 @@
 		<?php echo $form->textField($model,'rfi_id'); ?>
 		<?php echo $form->error($model,'rfi_id'); ?>
 	</div>		
+        
+        <div class="row">
+		<?php echo $form->labelEx($model,'title'); ?>
+		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->error($model,'title'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'originator'); ?>
+		<?php echo $form->textField($model,'originator',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->error($model,'originator'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'assigned_to'); ?>

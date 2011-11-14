@@ -49,11 +49,13 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'date_closed',
 		'assigned_to',
 		/*
-                'answered',
-                'closed',
+		'answered',
+		'closed',
 		'created_by',
 		'updated_by',
 		'date_updated',
+		'title',
+		'originator',
 		*/
 		array(
 			'class'=>'CButtonColumn',

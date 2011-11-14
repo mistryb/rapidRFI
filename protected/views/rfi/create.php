@@ -6,7 +6,10 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Rfi', 'url'=>array('index')),
-	array('label'=>'Manage Rfi', 'url'=>array('admin')),
+	array(  'label'=>'Manage Rfi', 
+                'url'=>array('admin'),
+                'visible'=> Yii::app()->user->checkAccess('RFI Manager'),
+            ),
 );
 ?>
 

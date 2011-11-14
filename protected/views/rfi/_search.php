@@ -32,10 +32,10 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'assigned_to'); ?>
-		<?php echo $form->textField($model,'assigned_to',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->textField($model,'assigned_to'); ?>
 	</div>
-    
-        <div class="row">
+
+	<div class="row">
 		<?php echo $form->label($model,'answered'); ?>
 		<?php echo $form->textField($model,'answered'); ?>
 	</div>
@@ -47,17 +47,27 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'created_by'); ?>
-		<?php echo $form->textField($model,'created_by',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->textField($model,'created_by'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'updated_by'); ?>
-		<?php echo $form->textField($model,'updated_by',array('size'=>60,'maxlength'=>256)); ?>
+		<?php echo $form->textField($model,'updated_by'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'date_updated'); ?>
 		<?php echo $form->textField($model,'date_updated'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'title'); ?>
+		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>256)); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'originator'); ?>
+		<?php echo $form->textField($model,'originator',array('size'=>60,'maxlength'=>256)); ?>
 	</div>
 
 	<div class="row buttons">

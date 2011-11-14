@@ -13,8 +13,7 @@ $this->menu=array(
                 'url'=>array(
                     'update', 
                     'id'=>$model->rfi_id
-                        ), 
-                'visible'=> Yii::app()->user->checkAccess('Rfi:Update', array('rfi'=>$model)),
+                        ),                 
             ),
 	array(  'label'=>'Delete Rfi', 
                 'url'=>'#',
@@ -51,6 +50,8 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'rfi_id',
+                'title',
+                'originator',
 		'date_entered',
 		'date_assigned',
 		'date_answered',

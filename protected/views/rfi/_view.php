@@ -1,9 +1,14 @@
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('rfi_id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->rfi_id), array('view', 'id'=>$data->rfi_id)); ?>
-	<br />
+	<b style="font-size:25px;">
+            <?php echo CHtml::encode($data->rfi_id); ?>
+        </b>
+                
+	<b><?php echo CHtml::link(CHtml::encode($data->title), array('view', 'id'=>$data->rfi_id)); ?></b>
+	<p style="float:right; font-size: 15px;"><?php echo CHtml::encode($data->date_entered); ?></p>
+        <br />
 
+        <?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('date_entered')); ?>:</b>
 	<?php echo CHtml::encode($data->date_entered); ?>
 	<br />
@@ -28,9 +33,12 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_by')); ?>:</b>
 	<?php echo CHtml::encode($data->createdBy->username); ?>
-	<br />
+	<br />                
 
-	<?php /*
+	<b><?php echo CHtml::encode($data->getAttributeLabel('originator')); ?>:</b>
+	<?php echo CHtml::encode($data->originator); ?>
+	<br />
+	
         
         <b><?php echo CHtml::encode($data->getAttributeLabel('closed')); ?>:</b>
 	<?php echo CHtml::encode($data->closed); ?>

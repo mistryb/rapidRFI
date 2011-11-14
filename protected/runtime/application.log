@@ -6868,3 +6868,24 @@ Stack trace:
 #13 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
 #14 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
 #15 {main} REQUEST_URI=/rapidrfi/index.php
+2011/11/14 18:34:27 [warning] [application] Failed to set unsafe attribute "originator" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (119)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/14 18:41:14 [warning] [application] Failed to set unsafe attribute "originator" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/14 18:51:32 [warning] [application] Failed to set unsafe attribute "originator" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/14 19:06:24 [warning] [application] Failed to set unsafe attribute "originator" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (119)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/14 19:06:51 [warning] [application] Failed to set unsafe attribute "originator" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (119)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/14 19:07:02 [warning] [application] Failed to set unsafe attribute "originator" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (119)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/14 19:08:01 [warning] [application] Failed to set unsafe attribute "originator" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (119)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
