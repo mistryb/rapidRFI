@@ -6,10 +6,42 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'My RFIs', 'url'=>array('myrfi')),
-	array('label'=>'Create Rfi', 'url'=>array('create')),
-	array('label'=>'Update Rfi', 'url'=>array('update', 'id'=>$model->rfi_id)),
-	array('label'=>'Delete Rfi', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->rfi_id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Rfi', 'url'=>array('admin')),
+	array(  'label'=>'Create Rfi', 
+                'url'=>array('create'), 
+                'visible'=> Yii::app()->user->checkAccess('RFI Manager')),
+	array(  'label'=>'Update Rfi', 
+                'url'=>array(
+                    'update', 
+                    'id'=>$model->rfi_id
+                        ), 
+                'visible'=> Yii::app()->user->checkAccess('Rfi:Update', array('rfi'=>$model)),
+            ),
+	array(  'label'=>'Delete Rfi', 
+                'url'=>'#',
+                'visible'=> Yii::app()->user->checkAccess('RFI Manager'),
+                'linkOptions'=>array(
+                        'submit'=>array(
+                            'delete',
+                            'id'=>$model->rfi_id),
+                            'confirm'=>'Are you sure you want to delete this item?'
+                    )
+            ),
+	array(  'label'=>'Manage Rfi', 
+                'url'=>array('admin'),
+                'visible'=> Yii::app()->user->checkAccess('RFI Manager')
+        ),
+        array(  'label'=>'Attach a Request File', 
+                'url'=>array(
+                    'requestfile/create',
+                    'id'=>$model->rfi_id,
+                        ),                
+        ),
+        array(  'label'=>'Attach a Response File', 
+                'url'=>array(
+                    'responsefile/create',
+                    'id'=>$model->rfi_id,
+                    ),               
+        ),
 );
 ?>
 

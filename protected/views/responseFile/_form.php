@@ -12,7 +12,7 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+	<div class="row" style="display:none">
 		<?php echo $form->labelEx($model,'rfi_id'); ?>
 		<?php echo $form->textField($model,'rfi_id'); ?>
 		<?php echo $form->error($model,'rfi_id'); ?>
@@ -32,18 +32,6 @@
         <?php echo $form->error($model,'filename'); ?>
         <div class="hint">You can upload one attachments. </div>
         </div>	
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'uploaded_date'); ?>
-		<?php echo $form->textField($model,'uploaded_date'); ?>
-		<?php echo $form->error($model,'uploaded_date'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'uploaded_by'); ?>
-		<?php echo $form->textField($model,'uploaded_by'); ?>
-		<?php echo $form->error($model,'uploaded_by'); ?>
-	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

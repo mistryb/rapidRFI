@@ -59,7 +59,7 @@ class RequestFileController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($id)
 	{
 		$model=new RequestFile;
 
@@ -69,14 +69,21 @@ class RequestFileController extends Controller
 		if(isset($_POST['RequestFile']))
 		{
                     $model->attributes=$_POST['RequestFile'];
+                    $model->rfi_id=$id;
                     if($filez=$this->uploadMultifile($model,'filename', '/uploads/'))
                     {
                         $model->filename= implode(',',$filez);
                     }			
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(
+                                        Yii::app()->createUrl(
+                                                'rfi/view', array(
+                                                    'id'=>$model->rfi_id
+                                                    )
+                                                )
+                                        );
 		}
-
+                $model->rfi_id=$id;
 		$this->render('create',array(
 			'model'=>$model,
 		));

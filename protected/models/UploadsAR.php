@@ -13,7 +13,7 @@ class UploadsAR extends CActiveRecord
         {   
             if($this->isNewRecord)
             {
-            // set the create date, last updated date and the user doing the creating
+            // set the create date, last updated date and the user doing the creating                   
                 $this->uploaded_date=new CDbExpression('NOW()');
                 $this->uploaded_by=Yii::app()->user->id;                
             }                     
