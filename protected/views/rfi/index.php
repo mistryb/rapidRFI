@@ -4,6 +4,14 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
+        array(
+                'label'=>'All RFIs',
+                'url'=>array('index'),            
+        ),
+        array(
+                'label'=>'My RFIs',
+                'url'=>array('myrfi'),
+        ),
         array(  
                 'label'=>'Create Rfi', 
                 'url'=>array('create'), 

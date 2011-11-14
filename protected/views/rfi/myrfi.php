@@ -1,9 +1,18 @@
 <?php
 $this->breadcrumbs=array(
-	'My Rfis',
+        'RFIs'=>array('index'),
+	'My RFIs',
 );
 
 $this->menu=array(
+        array(
+                'label'=>'All RFIs',
+                'url'=>array('index'),            
+        ),
+        array(
+                'label'=>'My RFIs',
+                'url'=>array('myrfi'),
+        ),
         array(  
                 'label'=>'Create Rfi', 
                 'url'=>array('create'), 
