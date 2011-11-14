@@ -164,8 +164,12 @@ class RfiController extends Controller
 	 * Lists myRFIs Page models.
 	 */
 	public function actionMyrfi()
-	{
-		$dataProvider=new CActiveDataProvider('Rfi');                
+	{                
+		$dataProvider=new CActiveDataProvider('Rfi', array(
+                    'criteria'=>array(
+                        'condition'=>'assigned_to='.Yii::app()->user->id, 
+                    )
+                ));                
 		$this->render('myrfi',array(
 			'dataProvider'=>$dataProvider,                     
 		));             
