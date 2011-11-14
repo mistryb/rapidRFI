@@ -4,9 +4,17 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Rfi', 'url'=>array('create')),
-	array('label'=>'Manage Rfi', 'url'=>array('admin')),
-);
+        array(  
+                'label'=>'Create Rfi', 
+                'url'=>array('create'), 
+                'visible'=> Yii::app()->user->checkAccess('RFI Manager'),
+            ),
+	array(  
+                'label'=>'Manage Rfi', 
+                'url'=>array('admin'),
+                'visible'=> Yii::app()->user->checkAccess('RFI Manager'),
+            )
+        );
 ?>
 
 <h1>Rfis</h1>
