@@ -80,6 +80,15 @@ body
 	text-decoration:none;
 }
 
+#legendlist li
+{
+    display: inline;
+    list-style-type: none;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 20px;
+}
+
 div.flash-error, div.flash-notice, div.flash-success
 {
 	padding:.8em;

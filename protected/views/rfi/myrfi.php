@@ -59,6 +59,11 @@ $flashChart->renderData('bar');
 $flashChart->render(500, 200);       
 ?>
 
+<ul id="legendlist">
+    <li style="background-color:#FFFFB5;">Answered</li>
+    <li style="background-color:#A5FF8A;">Closed</li>
+</ul>
+
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
