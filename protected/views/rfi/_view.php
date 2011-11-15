@@ -1,4 +1,4 @@
-<div class="view" <?php if(isset($data->assigned_to)){?> style="background-color: red;"<?php } ?>>
+<div class="view">
 
 	<b style="font-size:25px;">
             <?php echo CHtml::encode($data->rfi_id); ?>

@@ -143,5 +143,5 @@ class Rfi extends CActiveRecord
                 $this->updated_by=Yii::app()->user->id;                                                                         
             }
             return parent::beforeValidate();
-        }        
+        }       
 }
