@@ -16,7 +16,6 @@
  * @property integer $updated_by
  * @property string $date_updated
  * @property string $title
- * @property string $originator
  * 
  * The following are available model relations:
  * @property RequestFile[] $requestFiles
@@ -59,7 +58,7 @@ class Rfi extends CActiveRecord
 			array('answered, closed', 'boolean'),
                         // The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('rfi_id, date_entered, date_assigned, date_answered, date_closed, assigned_to, created_by, date_updated, title, originator', 'safe', 'on'=>'search'),
+			array('rfi_id, date_entered, date_assigned, date_answered, date_closed, assigned_to, created_by, date_updated, title,', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -97,7 +96,6 @@ class Rfi extends CActiveRecord
                         'updated_by' => 'Updated by',			
 			'date_updated' => 'Date Updated',
                         'title'=>'Title',
-                        'originator'=>'Originator',
 		);
 	}
 
@@ -122,7 +120,6 @@ class Rfi extends CActiveRecord
                 $criteria->compare('updated_by',$this->updated_by,true);		
 		$criteria->compare('date_updated',$this->date_updated,true);               
                 $criteria->compare('title',$this->title,true);
-                $criteria->compare('originator',$this->originator,true);
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
@@ -146,9 +143,5 @@ class Rfi extends CActiveRecord
                 $this->updated_by=Yii::app()->user->id;                                                                         
             }
             return parent::beforeValidate();
-        }
-        public function isUsersRfi($model)
-        {
-            return(Yii::app()->user->id==$model->assigned_to);
-        }
+        }        
 }

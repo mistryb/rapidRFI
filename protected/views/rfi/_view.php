@@ -1,4 +1,4 @@
-<div class="view">
+<div class="view" <?php if(isset($data->assigned_to)){?> style="background-color: red;"<?php } ?>>
 
 	<b style="font-size:25px;">
             <?php echo CHtml::encode($data->rfi_id); ?>
@@ -33,11 +33,7 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_by')); ?>:</b>
 	<?php echo CHtml::encode($data->createdBy->username); ?>
-	<br />                
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('originator')); ?>:</b>
-	<?php echo CHtml::encode($data->originator); ?>
-	<br />
+	<br />                	
 	
         
         <b><?php echo CHtml::encode($data->getAttributeLabel('closed')); ?>:</b>

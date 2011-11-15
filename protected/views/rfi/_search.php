@@ -65,11 +65,6 @@
 		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>256)); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->label($model,'originator'); ?>
-		<?php echo $form->textField($model,'originator',array('size'=>60,'maxlength'=>256)); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

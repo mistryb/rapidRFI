@@ -5,11 +5,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('username')); ?>:</b>
-	<?php echo CHtml::encode($data->username); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
-	<?php echo CHtml::encode($data->password); ?>
+	<b style="font-size:15px;"><?php echo CHtml::encode($data->username); ?></b>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>

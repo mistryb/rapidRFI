@@ -25,7 +25,7 @@ $this->menu=array(
         );
 ?>
 
-<h1>Rfis</h1>
+<h1>All RFIs</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

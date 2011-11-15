@@ -50,8 +50,7 @@ $this->menu=array(
 	'data'=>$model,
 	'attributes'=>array(
 		'rfi_id',
-                'title',
-                'originator',
+                'title',                
 		'date_entered',
 		'date_assigned',
 		'date_answered',

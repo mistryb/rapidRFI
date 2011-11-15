@@ -7026,3 +7026,52 @@ Stack trace:
 #14 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
 #15 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
 #16 {main} REQUEST_URI=/rapidrfi/index.php?r=user/view&id=stephenrocque
+2011/11/14 22:56:43 [warning] [application] Failed to set unsafe attribute "originator" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/14 22:57:25 [warning] [application] Failed to set unsafe attribute "originator" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/14 22:58:02 [warning] [application] Failed to set unsafe attribute "originator" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (87)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/14 22:58:41 [warning] [application] Failed to set unsafe attribute "originator" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (119)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/14 23:04:02 [warning] [application] Failed to set unsafe attribute "originator" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (119)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/14 23:04:30 [warning] [application] Failed to set unsafe attribute "originator" of "Rfi".
+in C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php (119)
+in C:\LOCALHOST\wamp\www\rapidRFI\index.php (13)
+2011/11/14 23:16:59 [error] [exception.CException] exception 'CException' with message 'Property "Rfi.originator" is not defined.' in C:\LOCALHOST\wamp\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\LOCALHOST\wamp\www\yii\framework\db\ar\CActiveRecord.php(129): CComponent->__get('originator')
+#1 C:\LOCALHOST\wamp\www\yii\framework\web\helpers\CHtml.php(2063): CActiveRecord->__get('originator')
+#2 C:\LOCALHOST\wamp\www\yii\framework\web\helpers\CHtml.php(1791): CHtml::resolveValue(Object(Rfi), 'originator')
+#3 C:\LOCALHOST\wamp\www\yii\framework\web\helpers\CHtml.php(1199): CHtml::activeInputField('text', Object(Rfi), 'originator', Array)
+#4 C:\LOCALHOST\wamp\www\yii\framework\web\widgets\CActiveForm.php(568): CHtml::activeTextField(Object(Rfi), 'originator', Array)
+#5 C:\LOCALHOST\wamp\www\rapidRFI\protected\views\rfi\_search.php(70): CActiveForm->textField(Object(Rfi), 'originator', Array)
+#6 C:\LOCALHOST\wamp\www\yii\framework\web\CBaseController.php(119): require('C:\LOCALHOST\wa...')
+#7 C:\LOCALHOST\wamp\www\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\LOCALHOST\wa...', Array, true)
+#8 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\LOCALHOST\wa...', Array, true)
+#9 C:\LOCALHOST\wamp\www\rapidRFI\protected\views\rfi\admin.php(37): CController->renderPartial('_search', Array)
+#10 C:\LOCALHOST\wamp\www\yii\framework\web\CBaseController.php(119): require('C:\LOCALHOST\wa...')
+#11 C:\LOCALHOST\wamp\www\yii\framework\web\CBaseController.php(88): CBaseController->renderInternal('C:\LOCALHOST\wa...', Array, true)
+#12 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(866): CBaseController->renderFile('C:\LOCALHOST\wa...', Array, true)
+#13 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(779): CController->renderPartial('admin', Array, true)
+#14 C:\LOCALHOST\wamp\www\rapidRFI\protected\controllers\RfiController.php(190): CController->render('admin', Array)
+#15 C:\LOCALHOST\wamp\www\yii\framework\web\actions\CInlineAction.php(50): RfiController->actionAdmin()
+#16 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#17 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#19 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(1144): CFilter->filter(Object(CFilterChain))
+#20 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\LOCALHOST\wamp\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(283): CFilterChain->run()
+#23 C:\LOCALHOST\wamp\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(277): CController->run('admin')
+#25 C:\LOCALHOST\wamp\www\yii\framework\web\CWebApplication.php(136): CWebApplication->runController('rfi/admin')
+#26 C:\LOCALHOST\wamp\www\yii\framework\base\CApplication.php(158): CWebApplication->processRequest()
+#27 C:\LOCALHOST\wamp\www\rapidRFI\index.php(13): CApplication->run()
+#28 {main} REQUEST_URI=/rapidrfi/index.php?r=rfi/admin
