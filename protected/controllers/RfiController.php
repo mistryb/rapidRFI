@@ -119,6 +119,7 @@ class RfiController extends Controller
 			$model->attributes=$_POST['Rfi'];
                         $model= $this->actionAssign($model);
                         $model= $this->actionAnswer($model);
+                        $model= $this->actionClose($model);
                         
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->rfi_id));
@@ -228,7 +229,8 @@ class RfiController extends Controller
                         {
                             $model->date_closed=new CDbExpression('NOW()');
                         } 
-                    } 
+                    }
+                    return $model;
         }
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.

@@ -7,5 +7,5 @@
     <b><?php echo CHtml::encode($data->getAttributeLabel('uploaded_by')); ?>:</b>
 	<?php echo CHtml::encode($data->uploadedBy->username); ?>
     <br />
-        
+    
 </div>
