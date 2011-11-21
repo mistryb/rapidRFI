@@ -90,19 +90,3 @@ $this->menu=array(
 	),
         'nullDisplay'=>'Not Set',
 )); ?>
-
-</br>
-<h1>Request Files for Rfi #<?php echo $model->rfi_id; ?></h1>
-<?php $this->widget( 'zii.widgets.CListView', array(
-        'dataProvider' => $requestDataProvider,       
-        'itemView' => '_file',
-    ));
-?>
-<h1>Response Files for Rfi #<?php echo $model->rfi_id; ?></h1>
-<?php $this->widget( 'zii.widgets.CListView', array(
-        'dataProvider' => $responseDataProvider,       
-        'itemView' => '_file',
-    ));
-?>
-
-
