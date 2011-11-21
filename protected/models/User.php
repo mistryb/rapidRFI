@@ -12,11 +12,10 @@
  * @property string $date_updated
  * 
  * The followings are the available model relations:
- * @property RequestFile[] $requestFiles
- * @property ResponseFile[] $responseFiles
  * @property Rfi[] $rfis
  * @property Rfi[] $rfis1
  * @property Rfi[] $rfis2
+ * @property Upload[] $uploads
  */
 
 class User extends CActiveRecord
@@ -67,11 +66,10 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-                        'requestFiles' => array(self::HAS_MANY, 'RequestFile', 'uploaded_by'),
-			'responseFiles' => array(self::HAS_MANY, 'ResponseFile', 'uploaded_by'),
 			'rfis' => array(self::HAS_MANY, 'Rfi', 'assigned_to'),
 			'rfis1' => array(self::HAS_MANY, 'Rfi', 'created_by'),
 			'rfis2' => array(self::HAS_MANY, 'Rfi', 'updated_by'),
+                        'uploads' => array(self::HAS_MANY, 'Upload', 'uploaded_by' ),
                     );
 	}
 
@@ -84,10 +82,8 @@ class User extends CActiveRecord
                         'id' => 'ID',
 			'username' => 'Username',
 			'password' => 'Password',
-			'first_name' => 'First Name',
-			'last_name' => 'Last Name',
 			'email' => 'Email',
-			'discipline' => 'Discipline',
+                        'last_login_time' => 'Last Login Time',
 			'date_created' => 'Date Created',
 			'date_updated' => 'Date Updated',
 		);
