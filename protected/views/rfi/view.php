@@ -1,7 +1,7 @@
 <?php
 $this->breadcrumbs=array(
 	'Rfis'=>array('index'),
-	$model->rfi_id,
+	$model->id,
 );
 
 $this->menu=array(
@@ -12,7 +12,7 @@ $this->menu=array(
 	array(  'label'=>'Update Rfi', 
                 'url'=>array(
                     'update', 
-                    'id'=>$model->rfi_id
+                    'id'=>$model->id
                         ),                 
             ),
 	array(  'label'=>'Delete Rfi', 
@@ -21,7 +21,7 @@ $this->menu=array(
                 'linkOptions'=>array(
                         'submit'=>array(
                             'delete',
-                            'id'=>$model->rfi_id),
+                            'id'=>$model->id),
                             'confirm'=>'Are you sure you want to delete this item?'
                     )
             ),
@@ -32,29 +32,25 @@ $this->menu=array(
         array(  'label'=>'Attach a Request File', 
                 'url'=>array(
                     'requestfile/create',
-                    'id'=>$model->rfi_id,
+                    'id'=>$model->id,
                         ),                
         ),
         array(  'label'=>'Attach a Response File', 
                 'url'=>array(
                     'responsefile/create',
-                    'id'=>$model->rfi_id,
+                    'id'=>$model->id,
                     ),               
         ),
 );
 ?>
 
-<h1>View Rfi #<?php echo $model->rfi_id; ?></h1>
+<h1>View Rfi #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'rfi_id',
+		'id',
                 'title',                
-		'date_entered',
-		'date_assigned',
-		'date_answered',
-		'date_closed',
 		array(
                     'label'=>'Assigned To',
                     'type' =>'raw',
@@ -63,16 +59,6 @@ $this->menu=array(
                             ),
                             array('user/view', 'id'=>CHtml::value($model->assignedTo, 'id', null)
                             )),
-                ),
-                array(
-                    'label'=>'Answered',
-                    'type'=>'boolean',
-                    'value'=>$model->answered,
-                ),
-                array(
-                    'label'=>'Closed',
-                    'type'=>'boolean',
-                    'value'=>$model->closed,
                 ),
                 array(
                     'label'=>'Created By',

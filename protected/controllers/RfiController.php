@@ -6,7 +6,7 @@ class RfiController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout='//layouts/column1';
 
 	/**
 	 * @return array action filters
@@ -52,22 +52,8 @@ class RfiController extends Controller
 	{
                 $model=$this->loadModel($id);
                 
-                $requestDataProvider= new CActiveDataProvider('RequestFile',array(
-                   'criteria'=>array(
-                       'condition'=>'rfi_id='.$model->rfi_id,
-                   ) 
-                ));
-                
-                $responseDataProvider= new CActiveDataProvider('ResponseFile',array(
-                   'criteria'=>array(
-                       'condition'=>'rfi_id='.$model->rfi_id,
-                   ) 
-                ));
-                
 		$this->render('view',array(
 			'model'=>$model,
-                        'requestDataProvider'=>$requestDataProvider,
-                        'responseDataProvider'=>$responseDataProvider,
 		));                               
 	}
 

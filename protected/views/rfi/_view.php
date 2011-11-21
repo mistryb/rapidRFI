@@ -1,32 +1,9 @@
-<div class="view" style="background-color: 
-     <?php
-     if(isset($data->assigned_to))
-     {
-      if($data->answered>0)
-      {
-          if($data->closed>0)
-          {
-              echo "#A5FF8A";//GREEN:Closed             
-          }
-          else {
-              echo "#FFFFB5";//YELLOW:Answered
-          }
-      }
-      else
-      {
-          echo "#B8E2EF";//BLUE:Assigned
-      }      
-     }
-     else
-     {
-        echo "#FFBBBB";//RED:unassigned
-     }     
-     ?>">
+<div class="view">
     
 	<b style="font-size:25px;">
-            <?php echo CHtml::encode($data->rfi_id); ?>
+            <?php echo CHtml::encode($data->id); ?>
         </b>
-        <p style="float:right; font-size: 15px;"><?php echo CHtml::encode($data->date_entered); ?>
+        <p style="float:right; font-size: 15px;">
         <br />
         <?php
         if (isset($data->assigned_to))
@@ -34,7 +11,7 @@
         ?>
         </p>
                 
-	<b><?php echo CHtml::link(CHtml::encode($data->title), array('view', 'id'=>$data->rfi_id)); ?></b>     
+	<b><?php echo CHtml::link(CHtml::encode($data->title), array('view', 'id'=>$data->id)); ?></b>     
 
         <?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('date_entered')); ?>:</b>
