@@ -42,12 +42,18 @@ class Upload extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('rfi_id, filename, date_uploaded, uploaded_by, type', 'required'),
+			array('rfi_id, type', 'required'),
 			array('rfi_id, uploaded_by', 'numerical', 'integerOnly'=>true),
 			array('filename, type', 'length', 'max'=>256),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, rfi_id, filename, date_uploaded, uploaded_by, type', 'safe', 'on'=>'search'),
+                        array('filename', 'file', 
+                            'types'=>'docx,doc',
+                            'maxSize'=> 1024*1024*10, //10MB
+                            'tooLarge'=>'The file is too large',
+                            'allowEmpty'=>1,                            
+                            )
 		);
 	}
 
@@ -101,4 +107,14 @@ class Upload extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        public function beforeValidate()
+        {   
+            if($this->isNewRecord)
+            {
+            // set the create date, last updated date and the user doing the creating                   
+                $this->date_uploaded=new CDbExpression('NOW()');
+                $this->uploaded_by=Yii::app()->user->id;                
+            }                     
+            return parent::beforeValidate();
+        } 
 }
