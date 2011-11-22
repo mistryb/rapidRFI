@@ -51,9 +51,14 @@ class RfiController extends Controller
 	public function actionView($id)
 	{                
                 $model=$this->loadModel($id);                               
-                
+                $uploadDataProvider= new CActiveDataProvider('Upload', array(
+                    'criteria'=> array(
+                        'condition' => 'rfi_id='.$id,
+                    )
+                ));
 		$this->render('view',array(
-			'model'=>$model,                        
+			'model'=>$model,
+                        'uploadDataProvider'=>$uploadDataProvider,
 		));                               
 	}
 

@@ -5,13 +5,11 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1>View Rfi #<?php echo $model->id; ?></h1>
+<h1><?php echo $model->id; ?> : <?php echo $model->title; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'id',
-                'title',                
 		array(
                     'label'=>'Assigned To',
                     'type' =>'raw',
@@ -38,7 +36,12 @@ $this->breadcrumbs=array(
         'nullDisplay'=>'Not Set',
 )); ?>
 <br/>
-<h1>Time Line for Rfi #<?php echo $model->id; ?></h1>
+
+<?php $this->beginWidget('ext.coolfieldset.JCollapsibleFieldset', array(
+        'collapsed'=>true,
+        'legend'=>'<h1>Timeline</h1>',
+        'legendHtmlOptions'=>array('title'=>'Timeline of RFI')
+    )); ?>
 <?php $this->widget('zii.widgets.CDetailView', array(
                         'data'=>$model->timeline,
                         'attributes'=>array(
@@ -53,3 +56,22 @@ $this->breadcrumbs=array(
                         )
                 );
 ?>
+<?php $this->endWidget('ext.coolfieldset.JCollapsibleFieldset'); ?>
+
+<br />
+
+<?php $this->beginWidget('ext.coolfieldset.JCollapsibleFieldset', array(
+        'collapsed'=>true,
+        'legend'=>'<h1>Attached Documents</h1>',
+        'legendHtmlOptions'=>array('title'=>'Timeline of RFI')
+    )); ?>
+
+<?php $this->widget('zii.widgets.CListView', array(
+                        'dataProvider'=>$uploadDataProvider,
+                        'itemView' => '_file',
+                        )
+                );
+?>
+
+
+<?php $this->endWidget('ext.coolfieldset.JCollapsibleFieldset'); ?>
