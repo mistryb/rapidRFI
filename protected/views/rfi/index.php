@@ -26,13 +26,13 @@ $this->menu=array(
 ?>
 
 <h1>All RFIs</h1>
-<ul id="legendlist">
-    <li style="background-color:#FFBBBB;">Unassigned</li>
-    <li style="background-color:#B8E2EF;">Assigned</li>
-    <li style="background-color:#FFFFB5;">Answered</li>
-    <li style="background-color:#A5FF8A;">Closed</li>
-</ul>
-
+<div id="legend">
+    <ul id="legendlist">
+        <li style="background-color:#FFBBBB;">Open</li>
+        <li style="background-color:#B8E2EF;">Unassigned</li>
+        <li style="background-color:#FFFFB5;">Unanswered</li>
+    </ul>
+</div>
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',

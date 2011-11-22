@@ -21,7 +21,11 @@ body
 	padding: 0;
 	border-top: 3px solid #C9E0ED;
 }
-
+#legend
+{
+    margin: auto;
+    width: 830px;
+}
 #content
 {
     padding: 20px;
@@ -82,11 +86,14 @@ body
 
 #legendlist li
 {
-    display: inline;
+    display: inline-block;
+    width: 200px;
     list-style-type: none;
     padding-right: 30px;
     padding-left: 30px;
     font-size: 20px;
+    text-align: center;
+    
 }
 
 div.flash-error, div.flash-notice, div.flash-success
