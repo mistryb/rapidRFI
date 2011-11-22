@@ -67,11 +67,10 @@ $this->breadcrumbs=array(
     )); ?>
 
 <?php $this->widget('zii.widgets.CListView', array(
-                        'dataProvider'=>$uploadDataProvider,
+                        'dataProvider'=>$uploads,
                         'itemView' => '_file',
                         )
                 );
 ?>
-
 
 <?php $this->endWidget('ext.coolfieldset.JCollapsibleFieldset'); ?>
